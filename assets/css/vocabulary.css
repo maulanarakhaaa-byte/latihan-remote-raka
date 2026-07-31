@@ -1,0 +1,72 @@
+
+.search-bar {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 20px; padding: 1.5rem; margin-bottom: 1.5rem;
+}
+.search-input-wrap { position: relative; margin-bottom: 1rem; }
+.search-icon { position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); font-size: 1.2rem; }
+.search-input {
+    width: 100%; padding: 0.9rem 1rem 0.9rem 3rem;
+    background: var(--card2); border: 2px solid var(--border);
+    border-radius: 14px; color: var(--text);
+    font-family: 'Nunito', sans-serif; font-size: 1rem; transition: all 0.3s;
+}
+.search-input:focus { outline: none; border-color: var(--blue); box-shadow: 0 0 0 4px rgba(28,176,246,0.1); }
+.filter-row { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+.filter-btn {
+    padding: 0.4rem 1rem; border-radius: 20px;
+    border: 1px solid var(--border); background: var(--card2);
+    color: var(--text-muted); font-family: 'Nunito', sans-serif;
+    font-size: 0.85rem; font-weight: 700; cursor: pointer; transition: all 0.3s;
+    text-decoration: none; display: inline-block;
+}
+.filter-btn:hover,
+.filter-btn.active { border-color: var(--blue); color: var(--blue); background: rgba(28,176,246,0.1); }
+
+.vocab-count { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.25rem; }
+.vocab-count strong { color: var(--text); }
+
+
+.vocab-grid-full {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+}
+
+
+.vocab-card-flip {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 18px; padding: 1.25rem; transition: all 0.3s;
+    cursor: pointer; position: relative; overflow: hidden;
+}
+.vocab-card-flip:hover {
+    border-color: var(--purple); transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+.vocab-card-flip.flipped .front { display: none; }
+.vocab-card-flip.flipped .back  { display: flex; }
+.front, .back { transition: all 0.3s; }
+.back { display: none; flex-direction: column; gap: 0.5rem; }
+
+.jlpt-badge {
+    position: absolute; top: 0.75rem; right: 0.75rem;
+    font-size: 0.7rem; font-weight: 800; padding: 0.2rem 0.5rem;
+    border-radius: 8px; background: rgba(255,217,0,0.15); color: var(--yellow);
+    border: 1px solid rgba(255,217,0,0.2);
+}
+.cat-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 0.4rem; }
+.vocab-main { font-family: 'Noto Serif JP', serif; font-size: 2rem; font-weight: 700; color: var(--yellow); margin-bottom: 0.25rem; }
+.vocab-hira { font-family: 'Noto Serif JP', serif; font-size: 1rem; color: var(--blue); margin-bottom: 0.2rem; }
+.vocab-romaji-sm { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.5rem; }
+.vocab-meaning { font-size: 1.1rem; font-weight: 700; color: var(--text); }
+.vocab-example { font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; margin-top: 0.25rem; }
+.vocab-example-jp { font-family: 'Noto Serif JP', serif; color: var(--text); }
+.flip-hint { font-size: 0.75rem; color: var(--text-muted); text-align: center; margin-top: 0.75rem; }
+
+
+.empty-state { text-align: center; padding: 4rem 2rem; color: var(--text-muted); }
+.empty-emoji { font-size: 4rem; display: block; margin-bottom: 1rem; }
+
+@media (max-width: 768px) {
+    .main { padding: 1rem; }
+}

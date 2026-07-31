@@ -1,0 +1,80 @@
+
+.cat-header {
+    background: linear-gradient(135deg, var(--card) 0%, var(--card2) 100%);
+    border: 1px solid var(--border); border-radius: 24px;
+    padding: 2rem; margin-bottom: 2rem;
+    display: flex; align-items: center; gap: 2rem;
+    position: relative; overflow: hidden;
+}
+.cat-header::before {
+    content: attr(data-jp);
+    position: absolute; right: 1rem; top: 50%; transform: translateY(-50%);
+    font-family: 'Noto Serif JP', serif;
+    font-size: 6rem; font-weight: 700;
+    opacity: 0.05; white-space: nowrap;
+}
+.cat-big-icon { font-size: 4rem; }
+.cat-header-info { flex: 1; }
+.cat-title { font-size: 2rem; font-weight: 900; }
+.cat-title-jp { font-family: 'Noto Serif JP', serif; font-size: 1.2rem; color: var(--text-muted); margin-bottom: 0.75rem; }
+.cat-desc { color: var(--text-muted); line-height: 1.6; margin-bottom: 1rem; }
+.prog-wrap { display: flex; align-items: center; gap: 0.75rem; }
+.prog-bar {
+    flex: 1; height: 14px; background: var(--card2);
+    border-radius: 7px; overflow: hidden; border: 1px solid var(--border);
+}
+.prog-fill {
+    height: 100%; border-radius: 7px; transition: width 1s;
+    background: var(--accent); box-shadow: 0 0 10px var(--accent);
+}
+.prog-text { font-size: 0.9rem; color: var(--text-muted); white-space: nowrap; }
+
+
+.lesson-list { display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2rem; }
+.lesson-card {
+    background: var(--card); border: 2px solid var(--border);
+    border-radius: 18px; padding: 1.25rem 1.5rem;
+    display: flex; align-items: center; gap: 1.25rem;
+    transition: all 0.3s; text-decoration: none; color: inherit;
+}
+.lesson-card.done { border-color: var(--green); background: rgba(88,204,2,0.05); }
+.lesson-card.locked { opacity: 0.55; cursor: not-allowed; pointer-events: none; }
+.lesson-card:hover { transform: translateX(4px); border-color: var(--accent); }
+.lesson-num {
+    width: 48px; height: 48px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.2rem; font-weight: 900; flex-shrink: 0;
+    background: var(--card2); border: 2px solid var(--border);
+}
+.lesson-num.done-num { background: var(--green); border-color: var(--green); color: white; }
+.lesson-info { flex: 1; }
+.lesson-title { font-size: 1.05rem; font-weight: 800; margin-bottom: 0.15rem; }
+.lesson-sub { font-family: 'Noto Serif JP', serif; font-size: 0.85rem; color: var(--text-muted); }
+.lesson-meta { display: flex; gap: 0.75rem; margin-top: 0.4rem; }
+.lesson-badge {
+    display: inline-flex; align-items: center; gap: 0.3rem;
+    font-size: 0.75rem; font-weight: 700;
+    padding: 0.2rem 0.6rem; border-radius: 8px;
+}
+.badge-xp  { background: rgba(255,150,0,0.15); color: var(--orange); }
+.badge-q   { background: rgba(28,176,246,0.15); color: var(--blue); }
+.badge-done{ background: rgba(88,204,2,0.15);  color: var(--green); }
+.lesson-arrow { color: var(--text-muted); font-size: 1.3rem; }
+
+
+.vocab-grid-sm {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 0.75rem;
+}
+.vocab-card-sm {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 14px; padding: 0.9rem; text-align: center;
+    transition: all 0.3s;
+}
+.vocab-card-sm:hover { border-color: var(--purple); transform: translateY(-2px); }
+
+@media (max-width: 768px) {
+    .cat-header { flex-direction: column; text-align: center; }
+    .main { max-width: 900px; }
+}
