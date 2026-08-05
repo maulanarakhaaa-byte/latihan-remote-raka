@@ -58,7 +58,7 @@ if (isLoggedIn()) redirect('user/dashboard.php');
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NihonGo! - Belajar Bahasa Nippon</title>
+<title>NihonGo! - Belajar Bahasa Jepang Seru!</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/base.css">
@@ -82,7 +82,7 @@ if (isLoggedIn()) redirect('user/dashboard.php');
         <div class="logo">🎌</div>
         <div class="logo-text">NihonGo!</div>
         <div class="logo-jp">日本語を学ぼう</div>
-        <p class="hero-desc">Belajar bahasa Jepang dengan cara yang menyenangkan! Seperti bermain game, kumpulkan XP, jaga streak harian, dan kuasai bahasa Jepang.</p>
+        <p class="hero-desc">Belajar bahasa Jepang dengan cara yang menyenangkan! Seperti bermain game, kumpulkan XP, jaga streak harian, dan kuasai bahasa Jepang. Ayo mulai sekarang!</p>
         
         <div class="hero-stats">
             <div class="stat-item">
